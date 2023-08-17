@@ -40,3 +40,39 @@ function generarListas(numeroMenor, numeroMayor) {
 
   console.log(listaNumerosCompletos, listaNumerosPares, listaNumerosImpares);
 }
+
+/**
+ * Función para mostrar etiqueta de montos
+ * @return {void}
+ */
+function setAlert() {
+  let formatoMoneda = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
+  let alert = document.getElementById('alert');
+  alert.removeAttribute('hidden');
+
+  alert.innerHTML = `
+  <p>Sub-total: 
+    <span class="badge text-bg-secondary">${formatoMoneda.format(
+      subtotal
+    )}</span>
+  </p>
+  
+  <p>Descuento aplicado: 
+    <span class="badge text-bg-success">${formatoMoneda.format(
+      descuento
+    )}</span>
+  </p>
+ 
+  <p>Total a pagar:
+    <span class="badge text-bg-success">${formatoMoneda.format(total)}</span>
+  </p>
+
+  <p>Porcentaje descuento:
+    <span class="badge text-bg-warning">${porcentajeAplicado}%</span>
+  </p>
+  `;
+}
