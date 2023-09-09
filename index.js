@@ -1,6 +1,7 @@
 // Import stylesheets
 import './style.css';
 
+//variable globales
 let listNums1;
 let listNums2;
 let listNums3;
@@ -9,6 +10,7 @@ let  listaNumerosCompletos = [];
 let listaNumerosPares = [];
 let listaNumerosImpares = [];
 
+//Inicio de logica principal
 document.getElementById('c').addEventListener('click', onInit);
 
 function onInit(e) {
@@ -21,8 +23,15 @@ function onInit(e) {
   setAlert();
 }
 
+/**
+ * Genera listas
+ * 
+ * @param {number} numeroMenor
+ * @param {number} numeroMayor
+ * @returns {void}
+ */
 function generarListas(numeroMenor, numeroMayor) {
-  for (let i = +Number(numeroMenor); i <= numeroMayor; i++) {
+  for (let i = +Number(numeroMenor); i <= +Number(numeroMayor); i++) {
     listNums1.push(i);
     if (i % 2 === 0) {
       //Pares
