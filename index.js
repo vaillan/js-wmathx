@@ -6,7 +6,7 @@ let listNums1;
 let listNums2;
 let listNums3;
 
-let  listaNumerosCompletos = [];
+let listaNumerosCompletos = [];
 let listaNumerosPares = [];
 let listaNumerosImpares = [];
 
