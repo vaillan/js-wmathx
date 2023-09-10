@@ -42,6 +42,7 @@ function generarListas(numeroMenor, numeroMayor) {
     }
   }
 
+  //Ordenamiento de valores
   listaNumerosCompletos = listNums1.sort(function (a, b) {
     return a - b;
   });
